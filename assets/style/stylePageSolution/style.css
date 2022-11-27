@@ -1,0 +1,1295 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  padding: 15px 0;
+}
+.header__inner {
+  padding: 0 44px;
+}
+.header__columns {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 44px;
+}
+.header__logo-items {
+  display: flex;
+  justify-content: flex-start;
+}
+.header__eng {
+  margin-left: 2.5em;
+  margin-right: 1.3em;
+  align-self: center;
+  text-decoration: none;
+}
+.header__rus {
+  margin-right: 1.3em;
+  align-self: center;
+  text-decoration: none;
+}
+.header__info-items {
+  display: flex;
+}
+.header__number {
+  margin-right: 3em;
+  align-self: center;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "PT Mono", monospace;
+  color: #ffffff;
+}
+.header__consult {
+  margin-right: 10px 50px 0 0;
+  padding-right: 93px;
+}
+.header__consult .btn {
+  display: inline-block;
+  padding: 10px 40px;
+  position: relative;
+  border-radius: 67px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 38px;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+.header__consult .btn:hover {
+  color: #5e1ec6;
+}
+.header .menu #menu__toggle {
+  opacity: 0;
+}
+.header .menu__btn {
+  display: flex;
+  align-items: center;
+  width: 36px;
+  height: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+.header .menu__image {
+  position: relative;
+  right: 20px;
+  top: 5px;
+}
+.header .menu__btn > span, .header .menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 36px;
+  height: 2px;
+}
+.header .menu__btn > span::after {
+  content: "";
+  top: 8px;
+  width: 80%;
+}
+.header .menu__box {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  visibility: hidden;
+  margin: 0px;
+  padding: 5em 0;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  background-image: url(../../images/imgHeader/news-background.png);
+  background-size: cover;
+  opacity: 1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+.header .menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "PT Mono", monospace;
+  font-size: 45px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.header .menu__item sup {
+  margin: 20px;
+}
+.header .menu__contacts, .header .menu__number {
+  display: none;
+}
+.header .menu__item:hover {
+  color: #ffffff;
+}
+.header .menu #menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+.header .menu #menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+  width: 100%;
+}
+.header .menu #menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header__inner {
+    padding: 0 22px;
+  }
+  .header__eng, .header__rus, .header__number, .header__consult {
+    display: none;
+  }
+  .header__logo {
+    width: 140px;
+    height: 36px;
+    padding: 6px 24px;
+  }
+  .header__hamburger {
+    margin-left: auto;
+  }
+  .header__columns {
+    padding-right: 25px;
+  }
+  .header .menu__image {
+    display: none;
+  }
+  .header .menu__btn {
+    width: 10px;
+    height: 0px;
+  }
+  .header .menu__item {
+    font-size: 20px;
+  }
+  .header .menu__contacts {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  .header .menu__number {
+    display: flex;
+    justify-content: center;
+    margin: 5% 0;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "PT Mono", monospace;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header__inner {
+    padding: 0 22px;
+  }
+  .header__eng, .header__rus {
+    display: none;
+  }
+  .header__number {
+    font-size: 16px;
+  }
+  .header__consult {
+    margin: 0 0;
+    padding-right: 30px;
+  }
+  .header__consult .btn {
+    padding: 10px 24px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .header__logo {
+    width: 140px;
+    height: 36px;
+  }
+  .header__hamburger {
+    margin-left: auto;
+  }
+  .header__columns {
+    padding-right: 25px;
+  }
+  .header .menu__image {
+    display: none;
+  }
+  .header .menu__btn {
+    width: 20px;
+    height: 10px;
+  }
+  .header .menu__item {
+    font-size: 40px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.463);
+}
+.header .header__eng,
+.header .header__number {
+  color: white;
+}
+.header .header__rus {
+  color: rgba(255, 255, 255, 0.3);
+}
+.header .btn {
+  color: #ffffff;
+  border: 1px solid #fff;
+}
+.header .menu__btn > span,
+.header .menu__btn > span::after {
+  background-color: white;
+}
+.header .menu__btn {
+  position: fixed;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 110vh 1fr 30% 35%;
+  grid-template-areas: "wrapper" "advantages" "application" "solution";
+}
+.container .wrapper {
+  grid-area: wrapper;
+  background-image: url("../../images/imgPageSolution/background_first.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+}
+.container .wrapper .news-inner__go-back {
+  padding: 10% 0% 1% 5%;
+}
+.container .wrapper__development {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding-left: 6.5%;
+  padding-top: 5%;
+}
+.container .wrapper__development-title {
+  font-size: 4.438em;
+}
+.container .wrapper__development-text {
+  padding-top: 5%;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+}
+.container .advantages {
+  grid-area: advantages;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../images/imgPageSolution/background_second.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+}
+.container .advantages .icons {
+  width: 20%;
+  max-width: 100%;
+  height: auto;
+}
+.container .advantages__title {
+  width: 50%;
+  padding-top: 50px;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 57px;
+  text-transform: uppercase;
+}
+.container .advantages__columns {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "advantages__columns-details advantages__columns-house advantages__columns-glassesgift" "advantages__columns-price advantages__columns-quality advantages__columns-panorama";
+  font-size: 14px;
+  line-height: 18px;
+  padding: 6.5%;
+}
+.container .advantages__columns-place {
+  padding: 0% 15% 10% 0%;
+}
+.container .advantages__columns h3 {
+  font-size: 19px;
+  line-height: 30px;
+}
+.container .advantages__columns-details {
+  grid-area: advantages__columns-details;
+}
+.container .advantages__columns-house {
+  grid-area: advantages__columns-house;
+}
+.container .advantages__columns-glassesgift {
+  grid-area: advantages__columns-glassesgift;
+}
+.container .advantages__columns-price {
+  grid-area: advantages__columns-price;
+}
+.container .advantages__columns-quality {
+  grid-area: advantages__columns-quality;
+}
+.container .advantages__columns-panorama {
+  grid-area: advantages__columns-panorama;
+}
+.container .application {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../images/imgPageSolution/background_second.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+}
+.container .application__title {
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 57px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+.container .application__body {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: "application__columns-industry application__columns-education application__columns-expositions application__columns-construction";
+  height: 70%;
+  padding-top: 5%;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.container .application__body-columns-number {
+  font-family: "PT Mono", monospace;
+}
+.container .application__body-columns {
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+}
+.container .application__body-columns-industry {
+  grid-area: application__columns-industry;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  padding: 5% 0% 0% 5%;
+}
+.container .application__body-columns-education {
+  grid-area: application__columns-education;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  padding: 5% 0% 0% 5%;
+}
+.container .application__body-columns-expositions {
+  grid-area: application__columns-expositions;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  padding: 5% 0% 0% 5%;
+}
+.container .application__body-columns-construction {
+  grid-area: application__columns-construction;
+  background-image: url("../../images/imgPageSolution/construction.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+}
+.container .application__body-columns-construction-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  padding: 5% 0% 0% 5%;
+}
+.container .solution {
+  grid-area: solution;
+  background-image: url("../../images/imgPageSolution/background_second.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+}
+.container .solution__title {
+  padding: 0% 0% 5% 6%;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 57px;
+  text-transform: uppercase;
+  color: white;
+}
+.container .solution__accordion {
+  width: 90%;
+}
+.container .solution__accordion label {
+  display: block;
+  width: 50%;
+  height: 3%;
+  z-index: 20;
+  position: relative;
+  padding-left: 6.5%;
+  cursor: pointer;
+  font-size: 1.375em;
+  line-height: 33px;
+  color: rgb(119, 119, 119);
+}
+.container .solution__accordion label:hover {
+  background: linear-gradient(112.73deg, #ff02ab 1.67%, #000fda 100%);
+  color: white;
+  font-weight: bold;
+}
+.container .solution__accordion input:checked + label,
+.container .solution__accordion input:checked + label:hover {
+  padding-left: 10%;
+  color: white;
+}
+.container .solution__accordion input {
+  display: none;
+}
+.container .solution__accordion article {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+  height: 0px;
+  z-index: 10;
+  transition: height 0.2s ease-in-out, box-shadow 0.6s linear;
+  padding-left: 6%;
+}
+.container .solution__accordion article img {
+  width: 50%;
+  max-width: 100%;
+  height: 100%;
+}
+.container .solution__accordion article .bold {
+  font-weight: bold;
+}
+.container .solution__accordion article .solution__accordion-first-inside,
+.container .solution__accordion article .solution__accordion-second-inside,
+.container .solution__accordion article .solution__accordion-third-inside,
+.container .solution__accordion article .solution__accordion-fourth-inside,
+.container .solution__accordion article .solution__accordion-fifth-inside {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 25% 25%;
+  grid-template-areas: "title title" "price period" "btn btn";
+  padding-right: 5%;
+  height: 100%;
+  color: rgb(255, 255, 255);
+}
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fifth-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fifth-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fifth-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fifth-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fifth-title {
+  grid-area: title;
+  padding: 5% 0% 5% 1%;
+  font-size: 1.063em;
+}
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fifth-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fifth-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fifth-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fifth-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fifth-price {
+  grid-area: price;
+  padding: 5% 0% 5% 1%;
+  font-size: 1em;
+}
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fifth-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fifth-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fifth-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fifth-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fifth-period {
+  grid-area: period;
+  padding: 5% 0% 20% 1%;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fifth-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fifth-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fifth-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fifth-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fifth-btn {
+  grid-area: btn;
+  width: 19.804vw;
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: linear-gradient(112.73deg, #1e4fc6 1.67%, #5e1ec6 100%);
+  border-radius: 67px;
+  border: none;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-first-btn:hover,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-second-btn:hover,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-third-btn:hover,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fourth-btn:hover,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fifth-btn:hover,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-first-btn:hover,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-second-btn:hover,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-third-btn:hover,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fourth-btn:hover,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fifth-btn:hover,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-first-btn:hover,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-second-btn:hover,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-third-btn:hover,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fourth-btn:hover,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fifth-btn:hover,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-first-btn:hover,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-second-btn:hover,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-third-btn:hover,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fourth-btn:hover,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fifth-btn:hover,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-first-btn:hover,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-second-btn:hover,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-third-btn:hover,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fourth-btn:hover,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fifth-btn:hover {
+  background: linear-gradient(112.73deg, #000fda 1.67%, #a202ff 100%);
+}
+.container .solution__accordion input:checked ~ article {
+  transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+  height: 50%;
+}
+.container .fixedbut {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 1fr 30% 40%;
+    grid-template-areas: "wrapper" "advantages" "application" "solution";
+  }
+  .container .wrapper {
+    grid-area: wrapper;
+    background-image: url("../../images/imgPageSolution/background_first_ipadmini.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .container .wrapper .news-inner__go-back {
+    padding: 15% 0% 0% 5%;
+  }
+  .container .wrapper__development {
+    width: 80%;
+    justify-content: flex-start;
+    padding-left: 10%;
+  }
+  .container .wrapper__development__title {
+    font-size: 58px;
+  }
+  .container .advantages {
+    grid-area: advantages;
+    align-items: flex-start;
+  }
+  .container .advantages .icons {
+    width: 30%;
+    max-width: 100%;
+    height: auto;
+  }
+  .container .advantages__title {
+    width: 60%;
+    padding-left: 10%;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 39px;
+  }
+  .container .advantages__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "advantages__columns-details advantages__columns-house advantages__columns-glassesgift" "advantages__columns-price advantages__columns-quality advantages__columns-panorama";
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .container .advantages__columns-place {
+    padding: 0% 15% 10% 10%;
+  }
+  .container .advantages__columns h3 {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .container .advantages__columns-details {
+    grid-area: advantages__columns-details;
+  }
+  .container .advantages__columns-house {
+    grid-area: advantages__columns-house;
+  }
+  .container .advantages__columns-glassesgift {
+    grid-area: advantages__columns-glassesgift;
+  }
+  .container .advantages__columns-price {
+    grid-area: advantages__columns-price;
+  }
+  .container .advantages__columns-quality {
+    grid-area: advantages__columns-quality;
+  }
+  .container .advantages__columns-panorama {
+    grid-area: advantages__columns-panorama;
+  }
+  .container .application__title {
+    text-align: start;
+    padding-left: 9%;
+    font-size: 32px;
+  }
+  .container .application__body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "application__columns-industry application__columns-education" "application__columns-expositions application__columns-construction";
+    height: 100%;
+    padding: 2% 10% 0% 8%;
+  }
+  .container .application__body-columns-number {
+    font-weight: normal;
+  }
+  .container .application__body-columns {
+    border: none;
+    padding: 10px;
+  }
+  .container .application__body-columns-industry {
+    grid-area: application__columns-industry;
+    justify-content: center;
+    height: 100%;
+    background-image: url("../../images/imgPageSolution/industry_ipadmini.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .container .application__body-columns-education {
+    grid-area: application__columns-education;
+    justify-content: center;
+    height: 100%;
+    background-image: url("../../images/imgPageSolution/education_ipadmini.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .container .application__body-columns-expositions {
+    grid-area: application__columns-expositions;
+    justify-content: center;
+    height: 100%;
+    background-image: url("../../images/imgPageSolution/expositions_ipadmini.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .container .application__body-columns-construction {
+    grid-area: application__columns-construction;
+    background-image: url("../../images/imgPageSolution/construction_ipadmini.png");
+  }
+  .container .application__body-columns-construction-text {
+    justify-content: center;
+    height: 100%;
+  }
+  .container .solution {
+    grid-area: solution;
+  }
+  .container .solution__title {
+    padding: 10% 0% 5% 10%;
+    font-size: 32px;
+  }
+  .container .solution__accordion {
+    width: 100%;
+    padding: 0% 10% 10% 10%;
+  }
+  .container .solution__accordion label {
+    width: 100%;
+    height: 3%;
+    padding: 2% 0% 2% 0%;
+    font-size: 22px;
+    border-top: 0.5px solid;
+    color: white;
+  }
+  .container .solution__accordion article {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    padding-left: 0%;
+  }
+  .container .solution__accordion article img {
+    padding: 2.5% 2.5% 2.5% 0%;
+  }
+  .container .solution__accordion article .solution__accordion-first-inside,
+.container .solution__accordion article .solution__accordion-second-inside,
+.container .solution__accordion article .solution__accordion-third-inside,
+.container .solution__accordion article .solution__accordion-fourth-inside,
+.container .solution__accordion article .solution__accordion-fifth-inside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-right: 0%;
+    line-height: 100%;
+  }
+  .container .solution__accordion article .solution__accordion-first-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fifth-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fifth-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fifth-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fifth-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fifth-title {
+    grid-area: title;
+    padding: 0% 0% 5% 0%;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .container .solution__accordion article .solution__accordion-first-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fifth-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fifth-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fifth-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fifth-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fifth-price {
+    grid-area: price;
+    padding: 0% 0% 5% 0%;
+  }
+  .container .solution__accordion article .solution__accordion-first-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fifth-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fifth-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fifth-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fifth-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fifth-period {
+    grid-area: period;
+    padding: 0% 0% 5% 0%;
+  }
+  .container .solution__accordion article .solution__accordion-first-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fifth-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fifth-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fifth-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fifth-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fifth-btn {
+    grid-area: btn;
+    margin-bottom: 5%;
+    width: 280px;
+    height: 45px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 110vh 1fr 30% 35%;
+    grid-template-areas: "wrapper" "advantages" "application" "solution";
+  }
+  .container .wrapper {
+    grid-area: wrapper;
+    background-image: url("../../images/imgPageSolution/background_first_iphone.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .container .wrapper .news-inner__go-back {
+    padding: 25% 0% 1% 5%;
+  }
+  .container .wrapper__development {
+    width: 100%;
+    padding-top: 15%;
+  }
+  .container .wrapper__development-title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .container .wrapper__development-text {
+    font-size: 13px;
+  }
+  .container .advantages {
+    grid-area: advantages;
+  }
+  .container .advantages .icons {
+    width: 40%;
+  }
+  .container .advantages__title {
+    width: 100%;
+    padding: 6%;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: bold;
+  }
+  .container .advantages__columns {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 32% 34% 33%;
+    grid-template-areas: "advantages__columns-details advantages__columns-house" "advantages__columns-glassesgift advantages__columns-price" "advantages__columns-quality advantages__columns-panorama";
+    font-size: 12px;
+    line-height: 13px;
+    padding: 6% 6% 5% 6%;
+  }
+  .container .advantages__columns-place {
+    padding: 0% 10% 10% 0%;
+  }
+  .container .advantages__columns h3 {
+    font-size: 18px;
+    line-height: 20px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .container .advantages__columns-details {
+    grid-area: advantages__columns-details;
+  }
+  .container .advantages__columns-house {
+    grid-area: advantages__columns-house;
+  }
+  .container .advantages__columns-glassesgift {
+    grid-area: advantages__columns-glassesgift;
+  }
+  .container .advantages__columns-price {
+    grid-area: advantages__columns-price;
+  }
+  .container .advantages__columns-quality {
+    grid-area: advantages__columns-quality;
+  }
+  .container .advantages__columns-panorama {
+    grid-area: advantages__columns-panorama;
+  }
+  .container .application__title {
+    text-align: start;
+    padding-left: 5%;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 25px;
+  }
+  .container .application__body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: "application__columns-industry" "application__columns-education" "application__columns-expositions" "application__columns-construction";
+    height: 100%;
+    padding: 2% 5% 0% 5%;
+  }
+  .container .application__body-columns-number {
+    font-weight: normal;
+  }
+  .container .application__body-columns {
+    border: none;
+    padding: 5% 0% 5% 0%;
+  }
+  .container .application__body-columns-industry {
+    grid-area: application__columns-industry;
+    justify-content: center;
+    height: 100%;
+    background-image: url("../../images/imgPageSolution/industry_ipadmini.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .container .application__body-columns-education {
+    grid-area: application__columns-education;
+    justify-content: center;
+    height: 100%;
+    background-image: url("../../images/imgPageSolution/education_ipadmini.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .container .application__body-columns-expositions {
+    grid-area: application__columns-expositions;
+    justify-content: center;
+    height: 100%;
+    background-image: url("../../images/imgPageSolution/expositions_ipadmini.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .container .application__body-columns-construction {
+    grid-area: application__columns-construction;
+    background-image: url("../../images/imgPageSolution/construction_ipadmini.png");
+  }
+  .container .application__body-columns-construction-text {
+    justify-content: center;
+    height: 100%;
+  }
+  .container .solution {
+    grid-area: solution;
+  }
+  .container .solution__title {
+    padding: 5% 0% 0% 0%;
+    text-align: center;
+    font-size: 25px;
+  }
+  .container .solution__accordion {
+    padding-left: 5%;
+    width: 95%;
+  }
+  .container .solution__accordion label {
+    width: 100%;
+    padding: 5% 0% 5% 0%;
+    font-size: 18px;
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+    border-bottom: 0.5px solid;
+  }
+  .container .solution__accordion input:checked + label,
+.container .solution__accordion input:checked + label:hover {
+    padding-left: 2%;
+  }
+  .container .solution__accordion article {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding: 0%;
+  }
+  .container .solution__accordion article img {
+    width: 100%;
+  }
+  .container .solution__accordion article .solution__accordion-first-inside,
+.container .solution__accordion article .solution__accordion-second-inside,
+.container .solution__accordion article .solution__accordion-third-inside,
+.container .solution__accordion article .solution__accordion-fourth-inside,
+.container .solution__accordion article .solution__accordion-fifth-inside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-right: 0%;
+    padding-bottom: 5%;
+  }
+  .container .solution__accordion article .solution__accordion-first-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fifth-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fifth-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fifth-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fifth-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-first-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-second-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-third-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fourth-title,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fifth-title {
+    grid-area: title;
+    padding: 5% 0% 5% 0%;
+    font-size: 14px;
+    line-height: 15px;
+  }
+  .container .solution__accordion article .solution__accordion-first-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fifth-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fifth-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fifth-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fifth-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-first-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-second-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-third-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fourth-price,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fifth-price {
+    grid-area: price;
+    padding: 0%;
+    font-size: 14px;
+    line-height: 15px;
+  }
+  .container .solution__accordion article .solution__accordion-first-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fifth-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fifth-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fifth-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fifth-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-first-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-second-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-third-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fourth-period,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fifth-period {
+    grid-area: period;
+    padding: 5% 0% 5% 0%;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .container .solution__accordion article .solution__accordion-first-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-first-inside .solution__accordion-fifth-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-second-inside .solution__accordion-fifth-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-third-inside .solution__accordion-fifth-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-fourth-inside .solution__accordion-fifth-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-first-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-second-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-third-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fourth-btn,
+.container .solution__accordion article .solution__accordion-fifth-inside .solution__accordion-fifth-btn {
+    grid-area: btn;
+    width: 100%;
+    height: 45px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 110vh 1fr 30% 35%;
+    grid-template-areas: "wrapper" "advantages" "application" "solution";
+  }
+  .container .advantages {
+    grid-area: advantages;
+  }
+  .container .advantages .icons {
+    width: 40%;
+    padding-top: 15px;
+  }
+  .container .advantages__columns {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 32% 34% 33%;
+    grid-template-areas: "advantages__columns-details advantages__columns-house" "advantages__columns-glassesgift advantages__columns-price" "advantages__columns-quality advantages__columns-panorama";
+  }
+  .container .advantages__columns-details {
+    grid-area: advantages__columns-details;
+    padding-bottom: 5%;
+  }
+  .container .advantages__columns-house {
+    grid-area: advantages__columns-house;
+    padding-bottom: 5%;
+  }
+  .container .advantages__columns-glassesgift {
+    grid-area: advantages__columns-glassesgift;
+    padding-bottom: 5%;
+  }
+  .container .advantages__columns-price {
+    grid-area: advantages__columns-price;
+    padding-bottom: 20px;
+  }
+  .container .application__title {
+    text-align: start;
+    padding-left: 5%;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 25px;
+  }
+}/*# sourceMappingURL=style.css.map */

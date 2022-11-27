@@ -1,0 +1,864 @@
+@import "../../style/styleHeader/header.scss";
+@import "../vars/vars.scss";
+
+
+
+* {
+    @include un-sel;
+}
+
+.header {
+    @include dark-header;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 110vh 1fr 30% 35%;
+    grid-template-areas: "wrapper""advantages""application""solution";
+
+    .wrapper {
+        grid-area: wrapper;
+        background-image: url("../../images/imgPageSolution/background_first.png");
+        @include bg;
+        font-family: $main-font;
+        color: $main-color;
+
+        .news-inner__go-back {
+            padding: 10% 0% 1% 5%;
+        }
+
+        &__development {
+            width: 45%;
+            @include f-column;
+            justify-content: center;
+            align-content: center;
+            padding-left: 6.5%;
+            padding-top: 5%;
+
+            &-title {
+                font-size: 4.438em;
+            }
+
+            &-text {
+                padding-top: 5%;
+                @include regular-paragraphs;
+            }
+        }
+    }
+
+    .advantages {
+        grid-area: advantages;
+        @include f-column;
+        align-items: center;
+        background-image: url("../../images/imgPageSolution/background_second.png");
+
+        @include bg;
+        font-family: $main-font;
+        color: $main-color;
+
+        .icons {
+            width: 20%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        &__title {
+            width: 50%;
+            padding-top: 50px;
+            @include h2;
+        }
+
+        &__columns {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 50% 50%;
+            grid-template-areas: "advantages__columns-details advantages__columns-house advantages__columns-glassesgift""advantages__columns-price advantages__columns-quality advantages__columns-panorama";
+            font-size: 14px;
+            line-height: 18px;
+            padding: 6.5%;
+
+            &-place {
+                padding: 0% 15% 10% 0%;
+            }
+
+            h3 {
+                font-size: 19px;
+                line-height: 30px;
+            }
+
+            &-details {
+                grid-area: advantages__columns-details;
+            }
+
+            &-house {
+                grid-area: advantages__columns-house;
+            }
+
+            &-glassesgift {
+                grid-area: advantages__columns-glassesgift;
+            }
+
+            &-price {
+                grid-area: advantages__columns-price;
+            }
+
+            &-quality {
+                grid-area: advantages__columns-quality;
+            }
+
+            &-panorama {
+                grid-area: advantages__columns-panorama;
+            }
+        }
+    }
+
+    .application {
+        @include f-column;
+        background-image: url("../../images/imgPageSolution/background_second.png");
+        @include bg;
+        font-family: $main-font;
+        color: $main-color;
+
+        &__title {
+            @include h2;
+            color: white;
+            text-align: center;
+        }
+
+        &__body {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-areas: "application__columns-industry application__columns-education application__columns-expositions application__columns-construction";
+            height: 70%;
+            padding-top: 5%;
+            font-weight: bold;
+            font-size: 1.25em;
+
+            &-columns-number {
+                font-family: $number-font;
+            }
+
+            &-columns {
+                border: 0.5px solid rgb(255, 255, 255, 0.5);
+
+                &-industry {
+                    grid-area: application__columns-industry;
+                    @include f-column;
+                    justify-content: space-between;
+                    height: 50%;
+                    padding: 5% 0% 0% 5%;
+                }
+
+                &-education {
+                    grid-area: application__columns-education;
+                    @include f-column;
+                    justify-content: space-between;
+                    height: 50%;
+                    padding: 5% 0% 0% 5%;
+                }
+
+                &-expositions {
+                    grid-area: application__columns-expositions;
+                    @include f-column;
+                    justify-content: space-between;
+                    height: 50%;
+                    padding: 5% 0% 0% 5%;
+                }
+
+                &-construction {
+                    grid-area: application__columns-construction;
+                    background-image: url("../../images/imgPageSolution/construction.jpg");
+                    @include bg;
+                    height: 100%;
+
+                    &-text {
+                        @include f-column;
+                        justify-content: space-between;
+                        height: 50%;
+                        padding: 5% 0% 0% 5%;
+                    }
+                }
+            }
+        }
+    }
+
+    .solution {
+        grid-area: solution;
+        background-image: url("../../images/imgPageSolution/background_second.png");
+        @include bg;
+        font-family: $main-font;
+        color: $main-color;
+
+        &__title {
+            padding: 0% 0% 5% 6%;
+            @include h2;
+            color: white;
+        }
+
+        &__accordion {
+            width: 90%;
+
+            label {
+                display: block;
+                width: 50%;
+                height: 3%;
+                z-index: 20;
+                position: relative;
+                padding-left: 6.5%;
+                cursor: pointer;
+                font-size: 1.375em;
+                line-height: 33px;
+                color: rgb(119, 119, 119);
+            }
+
+            label:hover {
+                background: linear-gradient(112.73deg, #ff02ab 1.67%, #000fda 100%);
+                color: white;
+                font-weight: bold;
+            }
+
+            input:checked+label,
+            input:checked+label:hover {
+                padding-left: 10%;
+                color: white;
+            }
+
+            input {
+                display: none;
+            }
+
+            article {
+                @include flex-space-between;
+                flex-direction: row;
+                position: relative;
+                overflow: hidden;
+                height: 0px;
+                z-index: 10;
+                transition: height 0.2s ease-in-out, box-shadow 0.6s linear;
+                padding-left: 6%;
+
+                img {
+                    width: 50%;
+                    max-width: 100%;
+                    height: 100%;
+                }
+
+                .bold {
+                    font-weight: bold;
+                }
+
+                .solution__accordion-first-inside,
+                .solution__accordion-second-inside,
+                .solution__accordion-third-inside,
+                .solution__accordion-fourth-inside,
+                .solution__accordion-fifth-inside {
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: 50% 25% 25%;
+                    grid-template-areas: "title title""price period""btn btn";
+                    padding-right: 5%;
+                    height: 100%;
+                    color: rgb(255, 255, 255);
+
+                    .solution__accordion-first-title,
+                    .solution__accordion-second-title,
+                    .solution__accordion-third-title,
+                    .solution__accordion-fourth-title,
+                    .solution__accordion-fifth-title {
+                        grid-area: title;
+                        padding: 5% 0% 5% 1%;
+                        font-size: 1.063em;
+                    }
+
+                    .solution__accordion-first-price,
+                    .solution__accordion-second-price,
+                    .solution__accordion-third-price,
+                    .solution__accordion-fourth-price,
+                    .solution__accordion-fifth-price {
+                        grid-area: price;
+                        padding: 5% 0% 5% 1%;
+                        font-size: 1em;
+                    }
+
+                    .solution__accordion-first-period,
+                    .solution__accordion-second-period,
+                    .solution__accordion-third-period,
+                    .solution__accordion-fourth-period,
+                    .solution__accordion-fifth-period {
+                        grid-area: period;
+                        padding: 5% 0% 20% 1%;
+                        font-size: 1em;
+                        line-height: 1.5em;
+                    }
+
+                    .solution__accordion-first-btn,
+                    .solution__accordion-second-btn,
+                    .solution__accordion-third-btn,
+                    .solution__accordion-fourth-btn,
+                    .solution__accordion-fifth-btn {
+                        grid-area: btn;
+                        width: 19.804vw;
+                        font-size: 12px;
+                        @include main-button;
+                        letter-spacing: 0.1em;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            input:checked~article {
+                transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+                height: 50%;
+            }
+        }
+    }
+
+    //кнопка наверх
+    .fixedbut {
+        @include button-up;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 1fr 30% 40%;
+        grid-template-areas: "wrapper""advantages""application""solution";
+
+        .wrapper {
+            grid-area: wrapper;
+            background-image: url("../../images/imgPageSolution/background_first_ipadmini.png");
+            @include bg;
+
+            .news-inner__go-back {
+                padding: 15% 0% 0% 5%;
+            }
+
+            &__development {
+                width: 80%;
+                justify-content: flex-start;
+                padding-left: 10%;
+
+                &__title {
+                    font-size: 58px;
+                }
+            }
+        }
+
+        .advantages {
+            grid-area: advantages;
+            align-items: flex-start;
+
+            .icons {
+                width: 30%;
+                max-width: 100%;
+                height: auto;
+            }
+
+            &__title {
+                width: 60%;
+                padding-left: 10%;
+                font-size: 32px;
+                font-weight: bold;
+                line-height: 39px;
+            }
+
+            &__columns {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: "advantages__columns-details advantages__columns-house advantages__columns-glassesgift""advantages__columns-price advantages__columns-quality advantages__columns-panorama";
+                font-size: 12px;
+                line-height: 17px;
+
+                &-place {
+                    padding: 0% 15% 10% 10%;
+                }
+
+                h3 {
+                    padding-top: 5px;
+                    padding-bottom: 10px;
+                    font-size: 18px;
+                    line-height: 18px;
+                }
+
+                &-details {
+                    grid-area: advantages__columns-details;
+                }
+
+                &-house {
+                    grid-area: advantages__columns-house;
+                }
+
+                &-glassesgift {
+                    grid-area: advantages__columns-glassesgift;
+                }
+
+                &-price {
+                    grid-area: advantages__columns-price;
+                }
+
+                &-quality {
+                    grid-area: advantages__columns-quality;
+                }
+
+                &-panorama {
+                    grid-area: advantages__columns-panorama;
+                }
+            }
+        }
+
+        .application {
+            &__title {
+                text-align: start;
+                padding-left: 9%;
+                font-size: 32px;
+            }
+
+            &__body {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 50% 50%;
+                grid-template-areas: "application__columns-industry application__columns-education""application__columns-expositions application__columns-construction";
+                height: 100%;
+                padding: 2% 10% 0% 8%;
+
+                &-columns-number {
+                    font-weight: normal;
+                }
+
+                &-columns {
+                    border: none;
+                    padding: 10px;
+
+                    &-industry {
+                        grid-area: application__columns-industry;
+                        justify-content: center;
+                        height: 100%;
+                        background-image: url("../../images/imgPageSolution/industry_ipadmini.png");
+                        @include bg;
+                    }
+
+                    &-education {
+                        grid-area: application__columns-education;
+                        justify-content: center;
+                        height: 100%;
+                        background-image: url("../../images/imgPageSolution/education_ipadmini.png");
+                        @include bg;
+                    }
+
+                    &-expositions {
+                        grid-area: application__columns-expositions;
+                        justify-content: center;
+                        height: 100%;
+                        background-image: url("../../images/imgPageSolution/expositions_ipadmini.png");
+                        @include bg;
+                    }
+
+                    &-construction {
+                        grid-area: application__columns-construction;
+                        background-image: url("../../images/imgPageSolution/construction_ipadmini.png");
+
+                        &-text {
+                            justify-content: center;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .solution {
+            grid-area: solution;
+
+            &__title {
+                padding: 10% 0% 5% 10%;
+                font-size: 32px;
+            }
+
+            &__accordion {
+                width: 100%;
+                padding: 0% 10% 10% 10%;
+
+                label {
+                    width: 100%;
+                    height: 3%;
+                    padding: 2% 0% 2% 0%;
+                    font-size: 22px;
+                    border-top: 0.5px solid;
+                    color: white;
+                }
+
+                article {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    width: 100%;
+                    padding-left: 0%;
+
+                    img {
+                        padding: 2.5% 2.5% 2.5% 0%;
+                    }
+
+                    .solution__accordion-first-inside,
+                    .solution__accordion-second-inside,
+                    .solution__accordion-third-inside,
+                    .solution__accordion-fourth-inside,
+                    .solution__accordion-fifth-inside {
+                        @include f-column;
+                        justify-content: flex-start;
+                        padding-right: 0%;
+                        line-height: 100%;
+
+                        .solution__accordion-first-title,
+                        .solution__accordion-second-title,
+                        .solution__accordion-third-title,
+                        .solution__accordion-fourth-title,
+                        .solution__accordion-fifth-title {
+                            grid-area: title;
+                            padding: 0% 0% 5% 0%;
+                            font-size: 14px;
+                            line-height: 19px;
+                        }
+
+                        .solution__accordion-first-price,
+                        .solution__accordion-second-price,
+                        .solution__accordion-third-price,
+                        .solution__accordion-fourth-price,
+                        .solution__accordion-fifth-price {
+                            grid-area: price;
+                            padding: 0% 0% 5% 0%;
+                        }
+
+                        .solution__accordion-first-period,
+                        .solution__accordion-second-period,
+                        .solution__accordion-third-period,
+                        .solution__accordion-fourth-period,
+                        .solution__accordion-fifth-period {
+                            grid-area: period;
+                            padding: 0% 0% 5% 0%;
+                        }
+
+                        .solution__accordion-first-btn,
+                        .solution__accordion-second-btn,
+                        .solution__accordion-third-btn,
+                        .solution__accordion-fourth-btn,
+                        .solution__accordion-fifth-btn {
+                            grid-area: btn;
+                            margin-bottom: 5%;
+                            width: 280px;
+                            height: 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 110vh 1fr 30% 35%;
+        grid-template-areas: "wrapper""advantages""application""solution";
+
+        .wrapper {
+            grid-area: wrapper;
+            background-image: url("../../images/imgPageSolution/background_first_iphone.png");
+            @include bg;
+
+            .news-inner__go-back {
+                padding: 25% 0% 1% 5%;
+            }
+
+            &__development {
+                width: 100%;
+                padding-top: 15%;
+
+                &-title {
+                    font-size: 40px;
+                    line-height: 40px;
+                }
+
+                &-text {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .advantages {
+            grid-area: advantages;
+
+            .icons {
+                width: 40%;
+            }
+
+            &__title {
+                width: 100%;
+                padding: 6%;
+                font-size: 25px;
+                line-height: 25px;
+                font-weight: bold;
+            }
+
+            &__columns {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 32% 34% 33%;
+                grid-template-areas: "advantages__columns-details advantages__columns-house""advantages__columns-glassesgift advantages__columns-price""advantages__columns-quality advantages__columns-panorama";
+                font-size: 12px;
+                line-height: 13px;
+                padding: 6% 6% 5% 6%;
+
+                &-place {
+                    padding: 0% 10% 10% 0%;
+                }
+
+                h3 {
+                    font-size: 18px;
+                    line-height: 20px;
+                    padding-top: 5%;
+                    padding-bottom: 5%;
+                }
+
+                &-details {
+                    grid-area: advantages__columns-details;
+                }
+
+                &-house {
+                    grid-area: advantages__columns-house;
+                }
+
+                &-glassesgift {
+                    grid-area: advantages__columns-glassesgift;
+                }
+
+                &-price {
+                    grid-area: advantages__columns-price;
+                }
+
+                &-quality {
+                    grid-area: advantages__columns-quality;
+                }
+
+                &-panorama {
+                    grid-area: advantages__columns-panorama;
+                }
+            }
+        }
+
+        .application {
+            &__title {
+                text-align: start;
+                padding-left: 5%;
+                font-size: 25px;
+                font-weight: bold;
+                line-height: 25px;
+            }
+
+            &__body {
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 25% 25% 25% 25%;
+                grid-template-areas: "application__columns-industry""application__columns-education""application__columns-expositions""application__columns-construction";
+                height: 100%;
+                padding: 2% 5% 0% 5%;
+
+                &-columns-number {
+                    font-weight: normal;
+                }
+
+                &-columns {
+                    border: none;
+                    padding: 5% 0% 5% 0%;
+
+                    &-industry {
+                        grid-area: application__columns-industry;
+                        justify-content: center;
+                        height: 100%;
+                        background-image: url("../../images/imgPageSolution/industry_ipadmini.png");
+                        @include bg;
+                    }
+
+                    &-education {
+                        grid-area: application__columns-education;
+                        justify-content: center;
+                        height: 100%;
+                        background-image: url("../../images/imgPageSolution/education_ipadmini.png");
+                        @include bg;
+                    }
+
+                    &-expositions {
+                        grid-area: application__columns-expositions;
+                        justify-content: center;
+                        height: 100%;
+                        background-image: url("../../images/imgPageSolution/expositions_ipadmini.png");
+                        @include bg;
+                    }
+
+                    &-construction {
+                        grid-area: application__columns-construction;
+                        background-image: url("../../images/imgPageSolution/construction_ipadmini.png");
+
+                        &-text {
+                            justify-content: center;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .solution {
+            grid-area: solution;
+
+            &__title {
+                padding: 5% 0% 0% 0%;
+                text-align: center;
+                font-size: 25px;
+            }
+
+            &__accordion {
+                padding-left: 5%;
+                width: 95%;
+
+                label {
+                    width: 100%;
+                    padding: 5% 0% 5% 0%;
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: rgb(255, 255, 255);
+                    border-bottom: 0.5px solid;
+                }
+
+                input:checked+label,
+                input:checked+label:hover {
+                    padding-left: 2%;
+                }
+
+                article {
+                    @include flex-space-between;
+                    flex-direction: column-reverse;
+                    justify-content: space-between;
+                    padding: 0%;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .solution__accordion-first-inside,
+                    .solution__accordion-second-inside,
+                    .solution__accordion-third-inside,
+                    .solution__accordion-fourth-inside,
+                    .solution__accordion-fifth-inside {
+                        @include f-column;
+                        justify-content: space-around;
+                        padding-right: 0%;
+                        padding-bottom: 5%;
+
+                        .solution__accordion-first-title,
+                        .solution__accordion-second-title,
+                        .solution__accordion-third-title,
+                        .solution__accordion-fourth-title,
+                        .solution__accordion-fifth-title {
+                            grid-area: title;
+                            padding: 5% 0% 5% 0%;
+                            font-size: 14px;
+                            line-height: 15px;
+                        }
+
+                        .solution__accordion-first-price,
+                        .solution__accordion-second-price,
+                        .solution__accordion-third-price,
+                        .solution__accordion-fourth-price,
+                        .solution__accordion-fifth-price {
+                            grid-area: price;
+                            padding: 0%;
+                            font-size: 14px;
+                            line-height: 15px;
+                        }
+
+                        .solution__accordion-first-period,
+                        .solution__accordion-second-period,
+                        .solution__accordion-third-period,
+                        .solution__accordion-fourth-period,
+                        .solution__accordion-fifth-period {
+                            grid-area: period;
+                            padding: 5% 0% 5% 0%;
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+
+                        .solution__accordion-first-btn,
+                        .solution__accordion-second-btn,
+                        .solution__accordion-third-btn,
+                        .solution__accordion-fourth-btn,
+                        .solution__accordion-fifth-btn {
+                            grid-area: btn;
+                            width: 100%;
+                            height: 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 110vh 1fr 30% 35%;
+        grid-template-areas: "wrapper""advantages""application""solution";
+
+        .advantages {
+            grid-area: advantages;
+
+            .icons {
+                width: 40%;
+                padding-top: 15px;
+            }
+
+            &__columns {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 32% 34% 33%;
+                grid-template-areas: "advantages__columns-details advantages__columns-house""advantages__columns-glassesgift advantages__columns-price""advantages__columns-quality advantages__columns-panorama";
+
+
+                &-details {
+                    grid-area: advantages__columns-details;
+                    padding-bottom: 5%;
+                }
+
+                &-house {
+                    grid-area: advantages__columns-house;
+                    padding-bottom: 5%;
+                }
+
+                &-glassesgift {
+                    grid-area: advantages__columns-glassesgift;
+                    padding-bottom: 5%;
+                }
+
+                &-price {
+                    grid-area: advantages__columns-price;
+                    padding-bottom: 20px;
+                }
+
+            }
+        }
+
+        .application {
+            &__title {
+                text-align: start;
+                padding-left: 5%;
+                font-size: 22px;
+                font-weight: bold;
+                line-height: 25px;
+            }
+        }
+    }
+}

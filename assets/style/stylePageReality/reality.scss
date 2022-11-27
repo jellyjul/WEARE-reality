@@ -1,0 +1,275 @@
+@import "../../style/styleHeader/header.scss";
+@import "../vars/vars.scss";
+
+
+* {
+    @include un-sel;
+}
+
+.header {
+    @include dark-header;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 115vh 50%;
+    grid-template-areas: "augmentedreality""augmentedreality__advantages";
+
+    .augmentedreality__intro {
+        grid-area: augmentedreality;
+        background-image: url("../../images/imgPageReality/background-first.png");
+        @include bg;
+        font-family: $main-font;
+        color: $main-color;
+
+        .news-inner__go-back {
+            padding: 10% 0% 0% 3%;
+        }
+
+        &-title {
+            @include h2;
+            width: 70%;
+            padding: 5% 5% 2% 7%;
+        }
+
+        &-text {
+            @include regular-paragraphs;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            width: 43%;
+            padding: 0% 5% 5% 7%;
+        }
+    }
+
+    .augmentedreality__advantages {
+        grid-area: augmentedreality__advantages;
+        background-image: url("../../images/imgPageReality/background_second.png");
+        @include bg;
+        font-family: $main-font;
+        color: $main-color;
+
+        &-title {
+            @include h2;
+            font-weight: normal;
+            padding: 2% 10% 0% 20%;
+            width: 90%;
+            text-align: start;
+        }
+
+        &-columns {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 100%;
+            grid-template-areas: " augmentedreality__advantages-columns-quality augmentedreality__advantages-columns-possibility augmentedreality__advantages-columns-effectivity";
+            width: 100%;
+            padding: 5% 0% 0% 7%;
+            font-size: 14px;
+            line-height: 18px;
+
+            .icons {
+                width: 20%;
+                max-width: 100%;
+                height: auto;
+            }
+
+            h3 {
+                padding: 3% 3% 3% 0%;
+                font-size: 19px;
+                line-height: 25px;
+            }
+
+            &-quality {
+                grid-area: augmentedreality__advantages-columns-quality;
+                padding-right: 15%;
+            }
+
+            &-possibility {
+                grid-area: augmentedreality__advantages-columns-possibility;
+                padding-right: 15%;
+            }
+
+            &-effectivity {
+                grid-area: augmentedreality__advantages-columns-effectivity;
+                padding-right: 15%;
+            }
+        }
+    }
+
+    //кнопка наверх
+    .fixedbut {
+        @include button-up;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 115vh 50%;
+        grid-template-areas: "augmentedreality""augmentedreality__advantages";
+
+        .augmentedreality__intro {
+            grid-area: augmentedreality;
+            background-image: url("../../images/imgPageReality/background-first-ipadmini.png");
+            @include bg;
+
+            .news-inner__go-back {
+                padding: 15% 0% 0% 3%;
+            }
+
+            &-title {
+                font-size: 32px;
+                width: 100%;
+                padding: 5% 5% 2% 10%;
+                font-weight: bold;
+            }
+
+            &-text {
+                font-size: 16px;
+                width: 70%;
+                padding: 0% 5% 5% 10%;
+            }
+        }
+
+        .augmentedreality__advantages {
+            grid-area: augmentedreality__advantages;
+            background-image: url("../../images/imgPageReality/background_second.png");
+            @include bg;
+
+            &-title {
+                padding: 5% 10% 0% 10%;
+                width: 100%;
+                font-size: 32px;
+                line-height: 39px;
+                font-weight: bold;
+            }
+
+            &-columns {
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                grid-template-rows: 100%;
+                grid-template-areas: " augmentedreality__advantages-columns-quality augmentedreality__advantages-columns-possibility augmentedreality__advantages-columns-effectivity";
+                padding: 5% 10% 0% 10%;
+                font-size: 12px;
+                line-height: 17px;
+
+                h3 {
+                    font-size: 18px;
+                    line-height: 18px;
+                }
+
+                &-quality {
+                    grid-area: augmentedreality__advantages-columns-quality;
+                    padding-right: 10%;
+                    font-size: 12px;
+                }
+
+                &-possibility {
+                    grid-area: augmentedreality__advantages-columns-possibility;
+                    padding-right: 10%;
+                    font-size: 12px;
+                }
+
+                &-effectivity {
+                    grid-area: augmentedreality__advantages-columns-effectivity;
+                    padding-right: 10%;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 115vh 60%;
+        grid-template-areas: "augmentedreality""augmentedreality__advantages";
+
+        .augmentedreality__intro {
+            grid-area: augmentedreality;
+            background-image: url("../../images/imgPageReality/background-first-iphone.png");
+            @include bg;
+
+            .news-inner__go-back {
+                padding: 15vh 0vh 0vh 5vw;
+            }
+
+            &-title {
+                padding: 10% 5% 2% 7%;
+                width: 100%;
+                font-size: 25px;
+                line-height: 25px;
+            }
+
+            &-text {
+                padding: 10% 5% 5% 7%;
+                width: 100%;
+                font-size: 13px;
+                line-height: 18px;
+            }
+        }
+
+        .augmentedreality__advantages {
+            grid-area: augmentedreality__advantages;
+            background-image: url("../../images/imgPageReality/background_second.png");
+            @include bg;
+
+            &-title {
+                padding: 10% 10% 0% 7%;
+                width: 100%;
+                font-size: 20px;
+                line-height: 25px;
+                font-weight: bold;
+            }
+
+            &-columns {
+                @include f-column;
+                height: 50%;
+                padding: 5% 10% 0% 7%;
+                font-size: 12px;
+                line-height: 13px;
+
+                .icons {
+                    width: 30%;
+                }
+
+                h3 {
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+
+                &-text {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 5px 10px 10px 0px;
+                }
+
+                &-quality {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    font-size: 0.875em;
+                    padding: 0%;
+                }
+
+                &-possibility {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    padding-top: 5px;
+                    font-size: 0.875em;
+                    padding: 0%;
+                }
+
+                &-effectivity {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    padding-top: 5px;
+                    font-size: 0.875em;
+                    padding: 0%;
+                }
+            }
+        }
+    }
+}

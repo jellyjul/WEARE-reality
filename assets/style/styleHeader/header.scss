@@ -1,0 +1,240 @@
+@import "../vars/vars.scss";
+* {
+    @include un-sel;
+}
+
+.header {
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    padding: 15px 0;
+    &__inner {
+        padding: 0 44px;
+    }
+    &__columns {
+        @include flex-space-between;
+        padding-right: 44px;
+    }
+    &__logo-items {
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__eng {
+        margin-left: 2.5em;
+        margin-right: 1.3em;
+        align-self: center;
+        text-decoration: none;
+    }
+    &__rus {
+        margin-right: 1.3em;
+        align-self: center;
+        text-decoration: none;
+    }
+    &__info-items {
+        display: flex;
+    }
+    &__number {
+        margin-right: 3em;
+        align-self: center;
+        font-size: 20px;
+        text-decoration: none;
+        cursor: pointer;
+        font-family: $number-font;
+        color: $main-color;
+    }
+    &__consult {
+        margin-right: 10px 50px 0 0;
+        padding-right: 93px;
+        .btn {
+            display: inline-block;
+            padding: 10px 40px;
+            position: relative;
+            border-radius: 67px;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 15px;
+            line-height: 38px;
+            letter-spacing: 0.1em;
+            text-align: center;
+            &:hover {
+                color: #5e1ec6;
+            }
+        }
+    }
+    .menu {
+        #menu__toggle {
+            opacity: 0;
+        }
+        &__btn {
+            display: flex;
+            align-items: center;
+            width: 36px;
+            height: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        &__image {
+            position: relative;
+            right: 20px;
+            top: 5px;
+        }
+        &__btn>span,
+        &__btn>span::after {
+            display: block;
+            position: absolute;
+            width: 36px;
+            height: 2px;
+        }
+        &__btn>span::after {
+            content: "";
+            top: 8px;
+            width: 80%;
+        }
+        &__box {
+            @include flex-center;
+            position: fixed;
+            visibility: hidden;
+            margin: 0px;
+            padding: 5em 0;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            background-image: url(../../images/imgHeader/news-background.png);
+            background-size: cover;
+            opacity: 1;
+            box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+        }
+        &__item {
+            display: block;
+            padding: 12px 24px;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: $number-font;
+            font-size: 45px;
+            font-weight: 600;
+            text-decoration: none;
+            sup {
+                margin: 20px;
+            }
+        }
+        &__contacts,
+        &__number {
+            display: none;
+        }
+        &__item:hover {
+            color: $main-color;
+        }
+        #menu__toggle:checked~.menu__btn>span {
+            transform: rotate(45deg);
+        }
+        #menu__toggle:checked~.menu__btn>span::after {
+            top: 0;
+            transform: rotate(90deg);
+            width: 100%;
+        }
+        #menu__toggle:checked~.menu__box {
+            visibility: visible;
+            left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        &__inner {
+            padding: 0 22px;
+        }
+        &__eng,
+        &__rus,
+        &__number,
+        &__consult {
+            display: none;
+        }
+        &__logo {
+            width: 140px;
+            height: 36px;
+            padding: 6px 24px;
+        }
+        &__hamburger {
+            margin-left: auto;
+        }
+        &__columns {
+            padding-right: 25px;
+        }
+        .menu {
+            &__image {
+                display: none;
+            }
+            &__btn {
+                width: 10px;
+                height: 0px;
+            }
+            &__item {
+                font-size: 20px;
+            }
+            &__contacts {
+                @include flex-center;
+                margin-top: 10%;
+                text-decoration: underline;
+                color: rgba(255, 255, 255, 0.8);
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+            &__number {
+                @include flex-center;
+                margin: 5% 0;
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.8);
+                font-family: $number-font;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .header {
+        &__inner {
+            padding: 0 22px;
+        }
+        &__eng,
+        &__rus {
+            display: none;
+        }
+        &__number {
+            font-size: 16px;
+        }
+        &__consult {
+            margin: 0 0;
+            padding-right: 30px;
+            .btn {
+                padding: 10px 24px;
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+        &__logo {
+            width: 140px;
+            height: 36px;
+        }
+        &__hamburger {
+            margin-left: auto;
+        }
+        &__columns {
+            padding-right: 25px;
+        }
+        .menu {
+            &__image {
+                display: none;
+            }
+            &__btn {
+                width: 20px;
+                height: 10px;
+            }
+            &__item {
+                font-size: 40px;
+            }
+        }
+    }
+}

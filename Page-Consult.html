@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/style/stylePageConsult/stylePageConsult.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__columns">
+        <div class="header__logo-items">
+          <a href="/Page-Home.html"><img class="header__logo" src="./assets/images/imgHeader/logo_blue.png"
+              alt="logo" /></a>
+          <a class="header__eng" href="#">EN</a>
+          <a class="header__rus" href="#">РУ</a>
+        </div>
+        <div class="header__info-items">
+          <a class="header__number" href="tel:+74951512251">+7 928 123 45 67</a>
+          <div class="header__consult">
+            <a href="./Page-Consult.html">
+              <button class="btn">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button></a>
+          </div>
+          <div class="header__hamburger menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+              <img class="menu__image" src="./assets/images/imgHeader/burger.png" alt="Circle" />
+            </label>
+            <ul class="menu__box">
+              <div class="menu__columns">
+                <li>
+                  <a class="menu__item" href="./Page-Home.html"><sup>01</sup>Главная</a>
+                </li>
+                <li>
+                  <a class="menu__item" href="./Page-Reality.html"><sup>02</sup>Дополненная реальность</a>
+                </li>
+                <li>
+                  <a class="menu__item" href="./Page-Solution.html"><sup>03</sup>VR Решения</a>
+                </li>
+                <li>
+                  <a class="menu__item" href="./Page-Design.html"><sup>04</sup>Дизайн интерьера</a>
+                </li>
+                <li>
+                  <a class="menu__item" href="#"><sup>05</sup>Команда</a>
+                </li>
+                <li>
+                  <a class="menu__item" href="./Page-News.html"><sup>06</sup>Новости</a>
+                </li>
+                <li>
+                  <a class="menu__item" href="#"><sup>07</sup>Контакты</a>
+                </li>
+                <li>
+                  <a class="menu__contacts" href="./Page-Consult.html">Получить консультацию</a>
+                  <a class="menu__number" href="tel:+7 928 123 45 67">+7 928 123 45 67</a>
+                </li>
+              </div>
+          </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="news-inner__go-back">
+      <a href="./Page-Home.html">
+        <img src="./assets/images/imgPageNews/ghost-button-consult.png" alt="Go back" />
+      </a>
+    </div>
+    <div class="consult">
+      <div class="consult__inner">
+        <h2 class="consult__title">Получить консультацию</h2>
+        <div class="consult__subtitle">
+          Мы всегда рады обсудить с вами ваш проект или ответить на вопросы.
+        </div>
+      </div>
+      <div class="consult__form">
+
+        <div class="consult__form-flex">
+          <div class="consult__name">
+            <label class="consult__label" for="name"></label>
+            <input type="text" name="name" id="name" placeholder="Имя" />
+          </div>
+          <div class="consult__number">
+            <label class="consult__label" for="number"></label>
+            <input type="number" name="number" id="number" placeholder="Телефон" />
+          </div>
+          <div class="consult__email">
+            <label class="consult__label" for="email"></label>
+            <input type="email" name="email" id="email" placeholder="E-mail" />
+          </div>
+          <div class="consult__task">
+            <label for="task"></label>
+            <input type="text" name="task" id="task" placeholder="Описание задачи" />
+          </div>
+        </div>
+        <div class="consult__container">
+          <div class="consult__checkbox">
+            <input type="checkbox" id="checkbox-agree" />
+            <label for="checkbox-agree">Я согласен с политикой
+              <a class="agree__link" href="#"> <span class="agree__link_passage">
+                  конфиденциальности</span></a></label>
+          </div>
+          <button class="consult__send">ОТПРАВИТЬ ЗАЯВКУ</button>
+        </div>
+      </div>
+    </div>
+    <div class="contacts__address">
+      <div class="contacts__info">
+        <img class="contacts__info-logo" src="./assets/images/imgPageNews/phone.png" alt="logo-phone" />
+        <a class="contacts__info-link" href="tel:+74991135702">+7 (499) 113-57-02</a>
+      </div>
+      <div class="contacts__info">
+        <img class="contacts__info-logo" src="./assets/images/imgPageNews/mail.png" alt="logo-mail" />
+        <a class="contacts__info-link" href="mailto:vr-design@group-project.ru">vr-design@group-project.ru</a>
+      </div>
+    </div>
+  </main>
+  <footer class="consult__footer">
+    <p class="consult__footer-text">&#169; 2021 vr-design</p>
+  </footer>
+</body>
+
+</html>

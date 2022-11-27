@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+$main-font: "Lato",
+sans-serif;
+$number-font: "PT Mono",
+monospace;
+$main-color: #ffffff;
+$color-text: rgba(255,
+255,
+255,
+0.8);
+$paragraph-color: rgba(255,
+255,
+255,
+0.8);
+$main-blue-color: #000032;
+$color-hover: rgba(80,
+39,
+198,
+1);
+@mixin un-sel {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin dark-header {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.463);
+    .header__eng,
+    .header__number {
+        color: white;
+    }
+    .header__rus {
+        color: rgba(255, 255, 255, 0.3);
+    }
+    .btn {
+        color: #ffffff;
+        border: 1px solid #fff;
+    }
+    .menu__btn>span,
+    .menu__btn>span::after {
+        background-color: white;
+    }
+    .menu__btn {
+        position: fixed;
+    }
+}
+
+@mixin h2 {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 57px;
+    text-transform: uppercase;
+}
+
+@mixin regular-paragraphs {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+@mixin checkbox {
+    &__input {
+        display: none;
+    }
+    &__input:checked {
+        transform: scale(1);
+    }
+    &__label {
+        font-weight: 400;
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+    }
+    &__label::before {
+        content: "";
+        align-self: flex-start;
+        flex: 0 0 20px;
+        height: 20px;
+        letter-spacing: 0.05em;
+        background-color: white;
+        border-radius: 2px;
+        margin-right: 10px;
+    }
+    &__label::after {
+        transition: transform 0.5s ease 0s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(0);
+    }
+    .checkbox__input:checked+.checkbox__label::after {
+        transform: scale(1);
+    }
+}
+
+@mixin main-button {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: linear-gradient(112.73deg, #1e4fc6 1.67%, #5e1ec6 100%);
+    border-radius: 67px;
+    border: none;
+    &:hover {
+        background: linear-gradient(112.73deg, #000fda 1.67%, #a202ff 100%);
+    }
+}
+
+@mixin contacts {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.03em;
+    gap: 10px;
+    margin-bottom: 57px;
+    a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .desing-pg-six__telephone::before {
+        position: relative;
+        bottom: -7px;
+        content: url("../../images/imgPageDesign/icons/phone.png");
+        padding-right: 23px;
+    }
+    .desing-pg-six__email::before {
+        position: relative;
+        bottom: -7px;
+        content: url("../../images/imgPageDesign/icons/mail.png");
+        padding-right: 18px;
+    }
+}
+
+@mixin vr-design {
+    font-weight: 400;
+    font-size: 17px;
+    padding-left: 8%;
+    padding-bottom: 52px;
+}
+
+@mixin button-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+@mixin f-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin page {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 920px;
+}
+
+@mixin bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@mixin title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 121%;
+}
+
+@mixin text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+}
+
+@mixin label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 110%;
+}
