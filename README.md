@@ -1,6 +1,6 @@
 # WEARE reality
 
-<p>A responsive Virtual reality website </p>
+<p>A responsive Virtual reality developing website </p>
 <img width="700" alt="Screenshot" src="assets/images/screenshots/1.png"/>
 <img width="700" alt="Screenshot" src="assets/images/screenshots/2.png"/>
 <img width="700" alt="Screenshot" src="assets/images/screenshots/3.png"/>
