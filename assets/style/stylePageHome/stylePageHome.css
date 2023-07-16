@@ -2484,15 +2484,15 @@ body {
     max-width: 272px;
   }
   .activity,
-.difference,
-.decisions,
-.room,
-.friend,
-.documents,
-.team,
-.reviews,
-.project,
-.project-second {
+  .difference,
+  .decisions,
+  .room,
+  .friend,
+  .documents,
+  .team,
+  .reviews,
+  .project,
+  .project-second {
     min-height: 506px;
   }
   .activity {

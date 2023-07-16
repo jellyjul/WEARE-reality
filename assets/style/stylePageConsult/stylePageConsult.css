@@ -448,8 +448,8 @@
     margin-bottom: 0;
   }
   .main .consult .consult__form .consult__name:after,
-.main .consult .consult__form .consult__number:after,
-.main .consult .consult__form .consult__email::after {
+  .main .consult .consult__form .consult__number:after,
+  .main .consult .consult__form .consult__email::after {
     content: "";
     margin: 0% 0;
   }
@@ -460,14 +460,14 @@
     bottom: -15px;
   }
   .main .consult #name,
-.main .consult #email,
-.main .consult #number {
+  .main .consult #email,
+  .main .consult #number {
     padding-left: 10px;
   }
   .main .consult .consult__name,
-.main .consult .consult__number,
-.main .consult .consult__task,
-.main .consult .consult__email {
+  .main .consult .consult__number,
+  .main .consult .consult__task,
+  .main .consult .consult__email {
     margin-bottom: 0%;
     padding-left: 10px;
     width: 100%;
@@ -505,9 +505,9 @@
     flex-wrap: wrap;
   }
   .main .consult .consult__name,
-.main .consult .consult__number,
-.main .consult .consult__task,
-.main .consult .consult__email {
+  .main .consult .consult__number,
+  .main .consult .consult__task,
+  .main .consult .consult__email {
     margin-bottom: 1%;
     width: 30%;
   }

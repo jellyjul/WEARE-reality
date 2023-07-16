@@ -538,16 +538,10 @@ main {
 .wrapper .desing-pg-six .registration__form .form__wrapper .form__reg::-moz-placeholder {
   color: #ffffff;
 }
-.wrapper .desing-pg-six .registration__form .form__wrapper .form__reg:-ms-input-placeholder {
-  color: #ffffff;
-}
 .wrapper .desing-pg-six .registration__form .form__wrapper .form__reg::placeholder {
   color: #ffffff;
 }
 .wrapper .desing-pg-six .registration__form .form__wrapper .form__reg:focus::-moz-placeholder {
-  opacity: 0;
-}
-.wrapper .desing-pg-six .registration__form .form__wrapper .form__reg:focus:-ms-input-placeholder {
   opacity: 0;
 }
 .wrapper .desing-pg-six .registration__form .form__wrapper .form__reg:focus::placeholder {
@@ -780,9 +774,6 @@ main {
   .wrapper .desing-pg-six__registration .form__wrapper .form__reg::-moz-placeholder {
     color: rgba(255, 255, 255, 0.5);
   }
-  .wrapper .desing-pg-six__registration .form__wrapper .form__reg:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.5);
-  }
   .wrapper .desing-pg-six__registration .form__wrapper .form__reg::placeholder {
     color: rgba(255, 255, 255, 0.5);
   }
@@ -867,7 +858,7 @@ main {
     display: none;
   }
   .wrapper .desing-pg-six__registration .registration__form .registration__form-second .form__wrapper label,
-.wrapper .desing-pg-six__registration .registration__form .registration__form-second .form__wrapper input {
+  .wrapper .desing-pg-six__registration .registration__form .registration__form-second .form__wrapper input {
     display: none;
   }
   .wrapper .desing-pg-six__registration .registration__form .registration__form-second .form__wrapper .submit {
