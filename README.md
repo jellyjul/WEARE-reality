@@ -1,6 +1,6 @@
-# Lingua Forward English School
+# WEARE reality
 
-<p>A responsive website for the owner of English school</p>
+<p>A responsive Virtual reality website </p>
 <img width="700" alt="Screenshot" src="assets/images/screenshots/1.png"/>
 <img width="700" alt="Screenshot" src="assets/images/screenshots/2.png"/>
 <img width="700" alt="Screenshot" src="assets/images/screenshots/3.png"/>
@@ -22,8 +22,6 @@ https://www.figma.com/file/6Vmub4lqmoZZA5UOOC4eZk/Untitled?type=design&node-id=1
 
 ## Thanks to all Contributors
 
-[![Contributors](https://contrib.rocks/image?repo=Ketenna
-/WEARE)](https://github.com/Ketenna
-/WEARE/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=Ketenna/WEARE)](https://github.com/Ketenna/WEARE/graphs/contributors)
 
 ## Result:
