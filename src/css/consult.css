@@ -79,7 +79,7 @@ a:hover {
   letter-spacing: 0.1em;
   text-align: center;
 }
-.header__consult .btn:hover {
+.header__consult .btn a:hover {
   color: #5e1ec6;
 }
 .header .menu #menu__toggle {
@@ -125,6 +125,9 @@ a:hover {
   background-size: cover;
   opacity: 1;
   box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+.header .menu__columns li {
+  list-style-type: none;
 }
 .header .menu__item {
   display: block;

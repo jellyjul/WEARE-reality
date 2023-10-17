@@ -116,10 +116,16 @@ a:hover {
             width: 100%;
             height: 100%;
             list-style: none;
+
             background-image: url(../images/imgHeader/news-background.png);
             background-size: cover;
             opacity: 1;
             box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+        }
+        &__columns {
+            li {
+                list-style-type: none;
+            }
         }
         &__item {
             display: block;
